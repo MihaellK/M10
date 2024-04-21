@@ -1,0 +1,254 @@
+openapi: 3.0.0
+info:
+  title: API de Gerenciamento de Todos
+  description: Esta é uma API para criar, consultar e deletar Todos.
+  version: "1.0.0"
+servers:
+  - url: 'http://127.0.0.1:5000/'
+    description: API de Testes
+
+paths:
+  /users:
+    get:
+      summary: Consultar todos os usuarios cadastrados
+      operationId: get_users
+      tags:
+        - Usuários
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dados do usuário
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  nome:
+                    type: string
+                    example: Teste
+                  email:
+                    type: string
+                    example: mail@mail.com
+        '404':
+          description: Usuário não encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+        '405':
+          description: Método não permitido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+
+    post:
+      summary: Cria um novo usuário
+      operationId: create_user
+      tags:
+        - Usuários
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+                - password
+              properties:
+                name:
+                  type: string
+                  example: Teste
+                email:
+                  type: string
+                  example: mail@mail.com
+                password:
+                  type: string
+                  example: 123456
+      responses:
+        '201':
+          description: Usuário criado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: '123'
+        '400':
+          description: Informação insuficiente para criar o usuário
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+        '405':
+          description: Método não permitido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+
+  
+
+  /users{id}:
+    delete_user:
+      summary: Deleta um usuário pelo ID
+      operationId: deletarUsuario
+      tags:
+        - Usuários
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Usuário deletado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: 'ok'
+        '404':
+          description: Usuário não encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+        '405':
+          description: Método não permitido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+
+  /todos:
+    get:
+      summary: Consultar todos To-Dos Cadastrados
+      operationId: get_todos
+      tags:
+        - todos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dados do Todo
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    example: A fazer de teste
+                  status:
+                    type: Boolean
+                    example: False
+
+    post:
+      summary: Cria um novo To-Do
+      operationId: create_todo
+      tags:
+        - todos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+                - status
+              properties:
+                title:
+                  type: string
+                  example: Novo Todo criado
+                status:
+                  type: boolean
+                  example: False
+      responses:
+        '201':
+          description: A fazer criado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: '123'
+        '400':
+          description: Informação insuficiente para criar o Todo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+        '405':
+          description: Método não permitido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+
+  
+
+  /todo{id}:
+    delete_todo:
+      summary: Deleta um todo pelo ID
+      operationId: delete_todo
+      tags:
+        - todos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Todo deletado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: 'ok'
+        '404':
+          description: Todo não encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+        '405':
+          description: Método não permitido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+
+components:
+  schemas:
+    ErrorModel:
+      type: object
+      properties:
+        mensagem:
+          type: string
+          example: 'Método não permitido'
