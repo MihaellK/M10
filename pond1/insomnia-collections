@@ -1,0 +1,331 @@
+_type: export
+__export_format: 4
+__export_date: 2024-04-21T19:04:12.556Z
+__export_source: insomnia.desktop.app:v8.6.1
+resources:
+  - _id: req_3071e51e4e274086a7421ee72f258829
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726044935
+    created: 1713725712247
+    url: "{{ _.baseUrl }}/login"
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Teste",
+          "email": "mail@mail.com",
+          "password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713726044863
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_7456301e995c49309ef2914128fd8bef
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1713723550280
+    created: 1713723550280
+    name: pond1
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1713723550280
+    _type: request_group
+  - _id: wrk_be7584157cf64d8ca13a996f241f4189
+    parentId: null
+    modified: 1713717273113
+    created: 1713715106752
+    name: M10 - Pond1
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_1288f57362024e4b921ea356d85d9494
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726055712
+    created: 1713719584554
+    url: "{{ _.baseUrl }}/todos"
+    name: Todos
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713726044763
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1be7c2d660d549e787e9a4987fc15a9d
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726060789
+    created: 1713725176972
+    url: "{{ _.baseUrl }}/todos"
+    name: Todos
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |+
+        {
+          "title": "to-do teste",
+          "status": "False"
+        }
+
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713726044663
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5e44824efe584031b586ad7fe3c4f2f3
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726066101
+    created: 1713725524375
+    url: "{{ _.baseUrl }}/todos"
+    name: Todos
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713726044563
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9ca2396928d4475982080ed9354ed79f
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726074659
+    created: 1713725569629
+    url: "{{ _.baseUrl }}/todos"
+    name: Todos
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713726044463
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2d18cb64b57d411085f9c2f5518a119e
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726119253
+    created: 1713726089107
+    url: "{{ _.baseUrl }}/user "
+    name: Users
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713726044363
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_feae017eea31451b8e525b6879c81dcc
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726131832
+    created: 1713726117034
+    url: "{{ _.baseUrl }}/user "
+    name: Users
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Teste",
+          "email": "mail@mail.com",
+            "password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713720695250.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ce7bb7f0995545e49f1ee74c6bae7ae2
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726148949
+    created: 1713726136705
+    url: "{{ _.baseUrl }}/user "
+    name: Users
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713720695150.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_71de3a41cc734a4d9b75e0408d8ea233
+    parentId: fld_7456301e995c49309ef2914128fd8bef
+    modified: 1713726157654
+    created: 1713726154257
+    url: "{{ _.baseUrl }}/user "
+    name: Users
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713718020644.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_baec282fec90e27aec3208780020d1bb76836ec2
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1713715106763
+    created: 1713715106763
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1713715106763
+    _type: environment
+  - _id: jar_baec282fec90e27aec3208780020d1bb76836ec2
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1713715106772
+    created: 1713715106772
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: env_51d1ad22311f45efb49a2fdc14cc1346
+    parentId: env_baec282fec90e27aec3208780020d1bb76836ec2
+    modified: 1713718219512
+    created: 1713717546825
+    name: Estudo de APIs
+    data:
+      baseUrl: https://deckofcardsapi.com/api/deck
+      deck_id: "{% response 'body', 'req_4d5125bdece24db58e9e10895a460fa4',
+        'b64::JC5kZWNrX2lk::46b', 'never', 60 %}"
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - deck_id
+    color: "#f2a63a"
+    isPrivate: false
+    metaSortKey: 1713717546825
+    _type: environment
+  - _id: env_1d61898acffc4d8e9821f495e767108f
+    parentId: env_baec282fec90e27aec3208780020d1bb76836ec2
+    modified: 1713725521393
+    created: 1713723561198
+    name: Pond1
+    data:
+      baseUrl: http://127.0.0.1:5000
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+    color: "#2968fa"
+    isPrivate: false
+    metaSortKey: 1713723561198
+    _type: environment
