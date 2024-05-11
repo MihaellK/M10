@@ -29,3 +29,15 @@ Para executar a API localmente:
   ```
 - Uma vez que o servidor esteja em execução, você pode enviar requisições para os endpoints especificados na documentação.
 
+## 2° Parte da Atividade - Desenvolvimento de API Assincrona
+
+Para esse Backend assincrono, que tem o mesmo objetivo do primeiro desenvolvido, gerenciar um sistema de To-Dos. Porém nessa aplicaçõa foi utilizado FastAPI com chamadas asincronas
+
+## Instruções para executar a API
+
+Para executar a API localmente, execute o comando na mesma pasta que se encontra o Dockerfile da aplicaçao assincrona:
+
+```
+docker build -t ponderada1 .
+docker run --rm -p 8000:8000 ponderada1
+```
