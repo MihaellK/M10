@@ -1,0 +1,195 @@
+_type: export
+__export_format: 4
+__export_date: 2024-05-17T13:42:08.018Z
+__export_source: insomnia.desktop.app:v9.2.0
+resources:
+  - _id: req_f897016023604efeb59490a47c1eeec2
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715952332754
+    created: 1715952299100
+    url: http://127.0.0.1:5000/pedidos/{id}
+    name: get_pedido
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.2.0
+    authentication: {}
+    metaSortKey: -1715952299100
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_be7584157cf64d8ca13a996f241f4189
+    parentId: null
+    modified: 1715121724925
+    created: 1713715106752
+    name: M10
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_95a4e09cff174e23aa3caba63e8dfa28
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715952320820
+    created: 1715952166007
+    url: http://127.0.0.1:5000/pedidos/{id}
+    name: delete_pedidos
+    description: ""
+    method: DELETE
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.2.0
+    authentication: {}
+    metaSortKey: -1715952166007
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bba90e5f2ca1454c9e942973ca60e7a0
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715952330345
+    created: 1715952135655
+    url: http://127.0.0.1:5000/pedidos/{id}
+    name: update_pedidos
+    description: ""
+    method: PUT
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.2.0
+    authentication: {}
+    metaSortKey: -1715952135655
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0aa811bc863b41408407cefb7c131a67
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715951648998
+    created: 1715951631270
+    url: http://127.0.0.1:5000/pedidos
+    name: get_pedidos
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.2.0
+    authentication: {}
+    metaSortKey: -1715951631270
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cde7b3b51b0045c6875443672ed6824d
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715952267982
+    created: 1715950908641
+    url: http://127.0.0.1:5000/novo
+    name: create_pedido
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        mimeType: application/json
+              text: |-
+                {
+                  "name": "Teste",
+                  "email": "mail@mail.com",
+                    "desc": "123456"
+                }
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_21787c88e5dd493da8c554f2c2f9c043
+        disabled: false
+      - name: User-Agent
+        value: insomnia/9.2.0
+        id: pair_3a157eb0133b4546b15dee1796b3a3c5
+    authentication: {}
+    metaSortKey: -1715950908641
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3310397b80c74e9481474f9c28e2f038
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715949948495
+    created: 1715949928623
+    url: http://127.0.0.1:5000
+    name: Hello W - P1
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.2.0
+    authentication: {}
+    metaSortKey: -1715949928623
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_baec282fec90e27aec3208780020d1bb76836ec2
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715121724924
+    created: 1713715106763
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1713715106763
+    _type: environment
+  - _id: jar_baec282fec90e27aec3208780020d1bb76836ec2
+    parentId: wrk_be7584157cf64d8ca13a996f241f4189
+    modified: 1715121724959
+    created: 1715121724959
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
