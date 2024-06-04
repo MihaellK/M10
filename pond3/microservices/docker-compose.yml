@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  login-service:
+    build:
+      context: ./login
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+  image-processing-service:
+    build:
+      context: ./image_processor
+    ports:
+      - "8001:8001"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
